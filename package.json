@@ -1,7 +1,7 @@
 {
   "name": "@cronosmain/env",
   "type": "module",
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "version": "1.0.1",
   "description": "Gets the environment variable or terminates the program execution.",
@@ -18,13 +18,16 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     }
   },
   "scripts": {
     "format": "prettier --write .",
-    "build": "tsc && esbuild --bundle --format=esm --platform=node --outfile=dist/index.js src/index.ts"
+    "build": "tsc && bun run build:esm && bun run build:cjs",
+    "build:esm": "esbuild --bundle --format=esm --platform=node --outfile=dist/index.mjs src/index.ts",
+    "build:cjs": "esbuild --bundle --format=cjs --platform=node --outfile=dist/index.cjs src/index.ts"
   },
   "prettier": {
     "semi": false,
