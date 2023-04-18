@@ -16,13 +16,13 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js",
-      "types": "./dist/types/index.d.ts"
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "scripts": {
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "build": "tsc && esbuild --bundle --format=esm --platform=node --outfile=dist/index.js src/index.ts"
   },
   "prettier": {
     "semi": false,
