@@ -1,7 +1,9 @@
 {
   "name": "@cronosmain/env",
   "type": "module",
-  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "version": "1.0.1",
   "description": "Gets the environment variable or terminates the program execution.",
   "author": "Mark https://t.me/cronosmain",
   "license": "ISC",
