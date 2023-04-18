@@ -25,9 +25,3 @@ import { env } from '@cronosmain/env'
 // status code 1 and a message in stderr (console.error)
 app.listen(env('TCP_PORT'), () => console.log('Listening...'))
 ```
-
-## Possible problems
-
-The library is entirely written using es modules. Only! This means that the `require()` is not supported. I really think it's time to move away from using CommonJS in new projects.
-
-If you don't use "type": "module" in your project, then... why?
