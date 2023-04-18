@@ -2,8 +2,8 @@
   "name": "@cronosmain/env",
   "type": "module",
   "version": "1.0.0",
-  "description": "A functional wrap around some value.",
-  "author": "Mark t.me/cronosmain",
+  "description": "Gets the environment variable or terminates the program execution.",
+  "author": "Mark https://t.me/cronosmain",
   "license": "ISC",
   "repository": {
     "type": "git",
