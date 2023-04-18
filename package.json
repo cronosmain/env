@@ -1,0 +1,39 @@
+{
+  "name": "@cronosmain/env",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A functional wrap around some value.",
+  "author": "Mark t.me/cronosmain",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cronosmain/env.git"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 80,
+    "tabWidth": 2,
+    "arrowParens": "always"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.4"
+  }
+}
