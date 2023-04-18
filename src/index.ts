@@ -1,4 +1,4 @@
-export let env = (varname: string) => {
+export let env = (varname: string): string => {
   let value = process.env[varname]
 
   if (value === undefined) {
