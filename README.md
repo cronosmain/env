@@ -18,10 +18,17 @@ Usually nodejs does not react if `process.env` has no value by key and proudly r
 
 ```ts
 import { app } from './app.ts'
-import { env } from '@cronosmain/env'
+import env from '@cronosmain/env'
+// env() can be imported as default:
+// import env from '@cronosmain/env'
+// or as a named variable:
+// import { env } from '@cronosmain/env'
 
 // If it is defined, the value will be returned
 // Otherwise the application will exit with
 // status code 1 and a message in stderr (console.error)
 app.listen(env('TCP_PORT'), () => console.log('Listening...'))
+
+// You can pass the fallback as a second argument
+let URL = env('SERVICE_URL', 'https://example.com')
 ```
