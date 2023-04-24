@@ -8,3 +8,5 @@ export let env = (varname: string, fallback?: string): string => {
 
   return value
 }
+
+export default env
