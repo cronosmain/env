@@ -2,7 +2,7 @@
 
 ## Description
 
-Gets the environment variable or terminates the program execution.
+Gets an environment variable or throws an Error-like object. Supports fallback.
 
 ## How to install?
 
@@ -25,8 +25,7 @@ import env from '@cronosmain/env'
 // import { env } from '@cronosmain/env'
 
 // If it is defined, the value will be returned
-// Otherwise the application will exit with
-// status code 1 and a message in stderr (console.error)
+// Otherwise Error-like object will be thrown
 app.listen(env('TCP_PORT'), () => console.log('Listening...'))
 
 // You can pass the fallback as a second argument
