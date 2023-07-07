@@ -1,9 +1,8 @@
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
-let envFile: string
 try {
-  envFile = readFileSync(resolve(process.cwd(), '.env'), 'utf8')
+  let envFile = readFileSync(resolve(process.cwd(), '.env'), 'utf8')
   for (let str of envFile.split('\n')) {
     let isComment = /^\s*#/.test(str)
     if (isComment) continue
