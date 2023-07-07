@@ -9,7 +9,6 @@ try {
     let match = /^\s*([^=]+?)\s*=\s*"(.*?)"/.exec(str)
     if (match === null) continue
     let [, key, value] = match
-    console.log(key, value)
     process.env[key] = value
   }
 } catch (error) {}

@@ -3,7 +3,7 @@
   "type": "module",
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Sets variables from the .env file. Allows to get them safely.",
   "author": "Mark https://t.me/cronosmain",
   "license": "ISC",
