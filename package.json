@@ -3,8 +3,8 @@
   "type": "module",
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "version": "1.4.0",
-  "description": "Gets the environment variable or terminates the program execution.",
+  "version": "1.5.0",
+  "description": "Sets variables from the .env file. Allows to get them safely.",
   "author": "Mark https://t.me/cronosmain",
   "license": "ISC",
   "repository": {
